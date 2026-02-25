@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gym-buddy/static/css/main.bc6a6406.css",
+    "main.js": "/gym-buddy/static/js/main.7a3b971d.js",
+    "static/js/453.345de8f0.chunk.js": "/gym-buddy/static/js/453.345de8f0.chunk.js",
+    "index.html": "/gym-buddy/index.html",
+    "main.bc6a6406.css.map": "/gym-buddy/static/css/main.bc6a6406.css.map",
+    "main.7a3b971d.js.map": "/gym-buddy/static/js/main.7a3b971d.js.map",
+    "453.345de8f0.chunk.js.map": "/gym-buddy/static/js/453.345de8f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc6a6406.css",
+    "static/js/main.7a3b971d.js"
+  ]
+}

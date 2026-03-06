@@ -766,7 +766,7 @@ body {
     align-items: center;
     margin-bottom: 30px;
     position: relative;
-    z-index: 1;
+    z-index: 1000;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -2313,18 +2313,18 @@ body {
 }
 
 .voice-panel {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    width: 340px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 320px;
     background: #1a1a24;
     border: 1px solid rgba(255,100,0,0.35);
     border-radius: 16px;
     padding: 18px;
-    z-index: 999;
+    z-index: 10001;
     box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 30px rgba(255,69,0,0.12);
     animation: panelSlideIn 0.2s ease-out;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow-y: auto;
 }
 @keyframes panelSlideIn {
@@ -3252,4 +3252,1147 @@ body {
     color: #ff6b6b;
     margin-top: 8px;
     line-height: 1.4;
+}
+
+/* ============================================
+   HOLD-TO-COMPLETE BUFFER
+   ============================================ */
+.workout-checkbox.holding {
+    transform: scale(1.12);
+    border-color: #00ff88 !important;
+    box-shadow: 0 0 16px rgba(0, 255, 136, 0.5) !important;
+}
+.hold-ring {
+    position: absolute;
+    inset: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    pointer-events: none;
+    z-index: 2;
+}
+.workout-checkbox {
+    position: relative;
+}
+
+/* ============================================
+   HIDDEN EGG
+   ============================================ */
+.hidden-egg {
+    opacity: 0.08;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: opacity 0.3s;
+    user-select: none;
+}
+.hidden-egg:hover { opacity: 0.5; }
+
+/* ============================================
+   EASTER EGG GAME
+   ============================================ */
+.egg-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+.egg-box {
+    background: linear-gradient(160deg, #1a0a00, #0d0d0d);
+    border: 2px solid rgba(255,100,0,0.35);
+    border-radius: 24px;
+    padding: 24px 28px;
+    width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(255,80,0,0.25);
+}
+.egg-emoji { font-size: 3.5rem; margin-bottom: 10px; }
+.egg-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 8px;
+}
+.egg-sub { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
+.egg-desc { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.5; margin-bottom: 14px; }
+.egg-hs { font-size: 0.75rem; color: #ffaa00; margin-bottom: 14px; }
+.egg-start-btn {
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+    border: none; border-radius: 12px;
+    color: white; font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem; letter-spacing: 2px;
+    padding: 12px 28px; cursor: pointer;
+    width: 100%; margin-bottom: 10px;
+    transition: transform 0.15s;
+}
+.egg-start-btn:hover { transform: scale(1.03); }
+.egg-close-btn {
+    background: none; border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.35); border-radius: 10px;
+    padding: 8px 20px; cursor: pointer; font-size: 0.75rem;
+    width: 100%; transition: all 0.2s;
+}
+.egg-close-btn:hover { color: rgba(255,255,255,0.6); }
+.egg-timer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem; letter-spacing: 4px;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+.egg-curl-btn {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 30px rgba(255,80,0,0.5);
+    transition: transform 0.08s, box-shadow 0.08s;
+    touch-action: none;
+}
+.egg-curl-btn.curled {
+    transform: scale(0.9) translateY(-4px);
+    box-shadow: 0 12px 40px rgba(255,80,0,0.8);
+}
+.egg-curl-emoji { font-size: 3rem; pointer-events: none; }
+.egg-click-count {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem; color: #ff8c00; letter-spacing: 2px;
+    line-height: 1;
+}
+.egg-cta { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 4px; letter-spacing: 2px; text-transform: uppercase; }
+.egg-progress-bar {
+    margin-top: 14px; height: 4px;
+    background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden;
+}
+.egg-progress-fill {
+    height: 100%; background: linear-gradient(90deg, #ff4500, #00ff88);
+    border-radius: 4px; transition: width 0.1s linear; max-width: 100%;
+}
+.egg-final-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem; color: #ff8c00; letter-spacing: 4px; line-height: 1;
+    margin: 8px 0;
+}
+.egg-new-hs { color: #00ff88; font-size: 0.8rem; font-weight: 800; margin: 8px 0; }
+.egg-btn-row { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+
+/* ============================================
+   VOICE ADVANCED / DETAILS
+   ============================================ */
+.voice-advanced {
+    margin-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 10px;
+}
+.voice-advanced summary {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    cursor: pointer;
+    list-style: none;
+    padding: 4px 0;
+    transition: color 0.2s;
+}
+.voice-advanced summary:hover { color: rgba(255,255,255,0.6); }
+.voice-adv-note {
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+/* ============================================
+   BICEP CURL SVG ANIMATION
+   ============================================ */
+.bicep-svg {
+    width: 80px;
+    height: 100px;
+    pointer-events: none;
+}
+.forearm-group {
+    transform: rotate(0deg);
+    transition: transform 0.12s ease-out;
+}
+.egg-curl-btn.curled .forearm-group {
+    transform: rotate(-110deg);
+}
+.bicep-bulge {
+    transition: rx 0.1s ease, ry 0.1s ease;
+}
+.egg-curl-btn.curled .bicep-bulge {
+    rx: 14;
+    ry: 16;
+}
+.egg-curl-btn {
+    background: linear-gradient(135deg, #1a0800, #2a1000);
+    border: 2px solid rgba(255,100,0,0.3);
+    width: 130px;
+    height: 130px;
+}
+.egg-curl-btn.curled {
+    background: linear-gradient(135deg, #2a0f00, #3a1800);
+    border-color: rgba(255,150,0,0.6);
+    box-shadow: 0 0 30px rgba(255,100,0,0.6);
+}
+
+/* ============================================
+   COOLDOWN TOAST
+   ============================================ */
+.cooldown-toast {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,69,0,0.95);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    z-index: 9999;
+    animation: toastPop 0.25s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(255,69,0,0.4);
+}
+@keyframes toastPop {
+    from { opacity: 0; transform: translateX(-50%) scale(0.85); }
+    to   { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+/* ============================================
+   GENDER TOGGLE
+   ============================================ */
+.gender-toggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+.gender-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+}
+.gender-btn:hover {
+    border-color: rgba(255,100,0,0.4);
+    color: rgba(255,255,255,0.8);
+}
+.gender-btn.active {
+    background: linear-gradient(135deg, rgba(255,69,0,0.25), rgba(255,140,0,0.15));
+    border-color: #ff6b35;
+    color: white;
+    box-shadow: 0 0 12px rgba(255,100,0,0.3);
+}
+.bmi-note {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.35);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.bmi-gender-tag {
+    font-size: 0.7rem;
+    background: rgba(255,100,0,0.15);
+    border: 1px solid rgba(255,100,0,0.3);
+    color: #ff8c42;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* ============================================
+   EASTER EGG — FULLSCREEN GAME
+   ============================================ */
+.egg-fullscreen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #1a0500 0%, #0a0000 100%);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.egg-intro-box {
+    text-align: center;
+    padding: 40px 32px;
+    max-width: 380px;
+    width: 100%;
+}
+.egg-play-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px 0 30px;
+}
+.egg-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 32px;
+}
+.egg-score-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: #ff8c00;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 30px rgba(255,140,0,0.6);
+}
+.egg-timer-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+    text-shadow: 0 0 20px currentColor;
+}
+.egg-arm-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    padding: 10px 0;
+}
+.egg-arm-svg {
+    width: min(200px, 48vw);
+    height: auto;
+    filter: drop-shadow(0 4px 24px rgba(160,82,45,0.5)) drop-shadow(0 0 8px rgba(244,164,96,0.3));
+    transition: filter 0.12s;
+}
+.egg-arm-wrap:active .egg-arm-svg {
+    filter: drop-shadow(0 6px 32px rgba(200,100,30,0.8)) drop-shadow(0 0 16px rgba(255,200,100,0.5));
+}
+.egg-tap-hint {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 12px;
+    transition: color 0.1s;
+}
+.egg-bottom-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 24px;
+}
+.egg-progress-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.egg-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4500, #ffcc00, #00ff88);
+    border-radius: 8px;
+    transition: width 0.15s ease;
+    max-width: 100%;
+}
+.egg-progress-label {
+    text-align: center;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+}
+.egg-flame-particle {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 100000;
+    animation: flameRise 0.8s ease-out forwards;
+}
+@keyframes flameRise {
+    0%   { transform: translateY(0) scale(1);   opacity: 1; }
+    100% { transform: translateY(-80px) scale(1.6); opacity: 0; }
+}
+.egg-final-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    color: #ff8c00;
+    line-height: 1;
+    text-shadow: 0 0 40px rgba(255,140,0,0.6);
+    margin: 8px 0;
+}
+.egg-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 8px;
+}
+.egg-sub { font-size: 0.88rem; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.egg-desc { font-size: 0.78rem; color: rgba(255,255,255,0.35); line-height: 1.5; margin-bottom: 14px; }
+.egg-hs { font-size: 0.78rem; color: #ffaa00; margin-bottom: 14px; }
+.egg-new-hs { color: #00ff88; font-size: 0.85rem; font-weight: 800; margin: 10px 0; }
+.egg-start-btn {
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+    border: none; border-radius: 14px;
+    color: white; font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem; letter-spacing: 2px;
+    padding: 14px 28px; cursor: pointer;
+    width: 100%; margin-bottom: 10px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(255,80,0,0.4);
+}
+.egg-start-btn:hover { transform: scale(1.03); box-shadow: 0 6px 30px rgba(255,80,0,0.6); }
+.egg-close-btn {
+    background: none; border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.3); border-radius: 10px;
+    padding: 10px 20px; cursor: pointer; font-size: 0.78rem;
+    width: 100%; transition: all 0.2s;
+}
+.egg-close-btn:hover { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.25); }
+.egg-btn-row { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+
+/* ============================================
+   VOICE CARDS
+   ============================================ */
+.voice-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+    max-height: 260px;
+    overflow-y: auto;
+}
+.voice-card {
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    color: rgba(255,255,255,0.6);
+    padding: 9px 12px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.18s;
+    font-family: 'Poppins', sans-serif;
+}
+.voice-card:hover {
+    background: rgba(255,100,0,0.1);
+    border-color: rgba(255,100,0,0.3);
+    color: white;
+}
+.voice-card.selected {
+    background: rgba(255,80,0,0.18);
+    border-color: #ff6b35;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(255,100,0,0.2);
+}
+.voice-confirm-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #ff4500, #ff8c00);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 11px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 3px 14px rgba(255,80,0,0.35);
+    letter-spacing: 0.5px;
+}
+.voice-confirm-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(255,80,0,0.5);
+}
+
+/* ============================================
+   EGG MINI MODAL PLAYING STATE
+   ============================================ */
+.egg-mini-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+.egg-score-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: #ff8c00;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255,140,0,0.5);
+}
+.egg-timer-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+/* removed duplicate egg-arm rule */
+.egg-tap-hint {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 6px;
+}
+.egg-progress-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.egg-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4500, #ffcc00, #00ff88);
+    border-radius: 6px;
+    transition: width 0.15s ease;
+    max-width: 100%;
+}
+.egg-progress-label {
+    text-align: center;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.egg-final-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: #ff8c00;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(255,140,0,0.5);
+    margin: 6px 0;
+}
+.egg-new-hs { color: #00ff88; font-size: 0.8rem; font-weight: 800; margin: 8px 0; }
+.egg-btn-row { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+
+/* ============================================
+   MUSCLE PILLS — GLOWING COLORED TAGS
+   ============================================ */
+.mm-icon { font-size: 1rem; }
+.mm-title {
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.muscle-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+.muscle-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--pill-color);
+    background: color-mix(in srgb, var(--pill-color) 18%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pill-color) 50%, transparent);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--pill-color) 30%, transparent);
+    animation: pillPop 0.3s ease both;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.muscle-pill:hover {
+    box-shadow: 0 0 16px var(--pill-color);
+    transform: translateY(-1px) scale(1.05);
+}
+@keyframes pillPop {
+    from { opacity: 0; transform: scale(0.7) translateY(4px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ============================================
+   EGG ARM — SMALLER SO IT FITS
+   ============================================ */
+/* removed duplicate egg-arm rule */
+
+/* ============================================
+   SITE FLAVOR — ENERGY & VISUAL LIFE
+   ============================================ */
+
+/* Animated gradient border on workout cards */
+.workout-card {
+    background: rgba(14,14,18,0.97);
+    border: 1px solid rgba(255,80,0,0.15);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+.workout-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(120deg, rgba(255,69,0,0.03) 0%, transparent 60%);
+    pointer-events: none;
+}
+.workout-card:hover {
+    border-color: rgba(255,100,0,0.5);
+    transform: translateX(6px) translateY(-1px);
+    box-shadow: -4px 4px 24px rgba(255,60,0,0.15);
+}
+.workout-card:hover::before {
+    background: linear-gradient(120deg, rgba(255,69,0,0.07) 0%, transparent 60%);
+}
+.workout-card.completed {
+    border-color: rgba(46,204,113,0.4);
+    background: linear-gradient(145deg, rgba(46,204,113,0.06) 0%, rgba(14,14,18,0.97) 100%);
+}
+
+/* Neon number badges */
+.workout-number {
+    background: linear-gradient(135deg, #ff4500, #ff6b35);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(255,69,0,0.5), 0 0 24px rgba(255,69,0,0.2);
+}
+
+/* Difficulty badges punch */
+.difficulty.easy   { background: rgba(46,204,113,0.15); color: #2ecc71; border: 1px solid rgba(46,204,113,0.4); text-shadow: 0 0 8px rgba(46,204,113,0.6); }
+.difficulty.medium { background: rgba(243,156,18,0.15); color: #f39c12; border: 1px solid rgba(243,156,18,0.4); text-shadow: 0 0 8px rgba(243,156,18,0.6); }
+.difficulty.hard   { background: rgba(231,76,60,0.15);  color: #e74c3c; border: 1px solid rgba(231,76,60,0.4);  text-shadow: 0 0 8px rgba(231,76,60,0.6); }
+
+/* Pulsing fire icon on timer when running */
+.timer-running-glow {
+    animation: timerPulse 1.8s ease-in-out infinite;
+}
+@keyframes timerPulse {
+    0%,100% { box-shadow: 0 0 0 rgba(255,69,0,0); }
+    50%     { box-shadow: 0 0 30px rgba(255,69,0,0.35), 0 0 60px rgba(255,69,0,0.15); }
+}
+
+/* Workout section header — bold separator */
+.workout-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+.workout-section-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.section-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,69,0,0.5), transparent);
+}
+
+/* Dashboard tab active — glowing underline */
+.dash-tab.active {
+    color: white;
+    border-bottom: 3px solid #ff4500;
+    box-shadow: 0 4px 16px rgba(255,69,0,0.3);
+    text-shadow: 0 0 12px rgba(255,100,0,0.5);
+}
+
+/* Motivational quote strip — floats above workout list */
+.motive-strip {
+    background: linear-gradient(90deg, rgba(255,69,0,0.12), rgba(255,140,0,0.08), rgba(255,69,0,0.12));
+    border: 1px solid rgba(255,80,0,0.2);
+    border-radius: 12px;
+    padding: 10px 18px;
+    margin-bottom: 16px;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: rgba(255,200,100,0.85);
+    letter-spacing: 0.3px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.motive-strip::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,150,0,0.08), transparent);
+    animation: shimmerSlide 3s ease-in-out infinite;
+}
+@keyframes shimmerSlide {
+    0%   { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Workout stat chips — more visible */
+.workout-stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 3px 9px;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.workout-card:hover .workout-stat {
+    background: rgba(255,80,0,0.08);
+    border-color: rgba(255,80,0,0.2);
+}
+.workout-stat.calories {
+    color: #ff8c42;
+    border-color: rgba(255,100,0,0.25);
+    background: rgba(255,80,0,0.08);
+}
+
+/* Welcome header — more dramatic */
+.welcome-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: #fff;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #fff 60%, #ff8c42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Streak widget glow */
+.streak-widget {
+    position: relative;
+}
+.streak-widget::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255,69,0,0.3), transparent, rgba(255,140,0,0.2));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.streak-widget:hover::after { opacity: 1; }
+
+/* Calories stat — fire pulse */
+.workout-stat.calories strong {
+    animation: calPulse 2s ease-in-out infinite;
+}
+@keyframes calPulse {
+    0%,100% { opacity: 1; }
+    50%     { opacity: 0.7; }
+}
+
+/* YT button — more vibrant */
+.yt-btn {
+    background: rgba(255,0,0,0.14) !important;
+    border: 1px solid rgba(255,0,0,0.35) !important;
+    color: #ff5555 !important;
+    border-radius: 8px !important;
+    padding: 4px 10px !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: all 0.2s !important;
+    margin-left: auto !important;
+    letter-spacing: 0.3px !important;
+}
+.yt-btn:hover {
+    background: rgba(255,0,0,0.28) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(255,0,0,0.3) !important;
+}
+
+/* Muscle map card — enhanced */
+.muscle-map-card {
+    background: linear-gradient(135deg, rgba(18,10,26,0.95), rgba(10,8,18,0.98));
+    border: 1px solid rgba(180,0,255,0.15);
+    border-radius: 16px;
+    padding: 12px 16px;
+    margin: 0 20px 14px;
+    box-shadow: 0 4px 24px rgba(150,0,255,0.07);
+}
+
+/* Progress ring glow */
+.progress-circle circle:last-child {
+    filter: drop-shadow(0 0 6px rgba(255,69,0,0.6));
+}
+
+/* BMI section - cleaner */
+.bmi-section {
+    position: relative;
+}
+.bmi-range.active {
+    box-shadow: 0 0 20px currentColor;
+}
+
+/* ============================================
+   EGG ARM — DEFINITIVE SIZE FIX
+   (overrides all previous rules)
+   ============================================ */
+.egg-arm-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 0 8px;
+    width: 100%;
+}
+.egg-arm-svg {
+    width: 90px !important;
+    max-width: 90px !important;
+    height: auto !important;
+    display: block;
+    filter: drop-shadow(0 3px 10px rgba(160,82,45,0.4));
+    transition: filter 0.1s;
+    overflow: visible;
+}
+.egg-arm-wrap:active .egg-arm-svg {
+    filter: drop-shadow(0 5px 18px rgba(200,100,30,0.65));
+}
+
+/* ============================================================
+   ★ WOW FACTOR — PREMIUM VISUAL UPGRADE ★
+   ============================================================ */
+
+/* === GLOBAL TEXTURE OVERLAY === */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* === RICHER DASHBOARD BG === */
+.dashboard-screen::before {
+    background:
+            radial-gradient(ellipse at 15% 10%, rgba(255,60,0,0.13) 0%, transparent 45%),
+            radial-gradient(ellipse at 85% 85%, rgba(255,120,0,0.10) 0%, transparent 45%),
+            radial-gradient(ellipse at 50% 40%, rgba(255,80,0,0.06) 0%, transparent 60%),
+            radial-gradient(ellipse at 70% 10%, rgba(200,0,100,0.04) 0%, transparent 40%),
+            linear-gradient(180deg, #080808 0%, #0f0500 50%, #080808 100%);
+    animation: bgPulse 10s ease-in-out infinite alternate;
+}
+
+/* === WORKOUT CARD — GLASS MORPHISM + ACCENT LINE === */
+.workout-card {
+    background: linear-gradient(135deg, rgba(22,12,5,0.98) 0%, rgba(14,8,3,0.99) 100%);
+    border: 1px solid rgba(255,80,0,0.12);
+    border-radius: 18px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    transition: transform 0.22s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.22s ease, border-color 0.22s ease;
+    position: relative;
+    overflow: hidden;
+}
+.workout-card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #ff4500, transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 3px 0 0 3px;
+}
+.workout-card:hover {
+    border-color: rgba(255,100,0,0.4);
+    transform: translateX(6px) translateY(-2px);
+    box-shadow: -6px 6px 30px rgba(255,50,0,0.12), 0 0 0 1px rgba(255,80,0,0.08);
+}
+.workout-card:hover::after { opacity: 1; }
+.workout-card.completed::after {
+    background: linear-gradient(180deg, transparent, #2ecc71, transparent);
+    opacity: 1;
+}
+
+/* === SECTION DIVIDER LINE === */
+.section-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,69,0,0.6), rgba(255,69,0,0.1), transparent);
+}
+
+/* === TIMER — GLOWING WHEN RUNNING === */
+.workout-timer {
+    transition: box-shadow 0.4s ease;
+}
+.workout-timer.running {
+    box-shadow: 0 0 0 1px rgba(255,69,0,0.3), 0 0 30px rgba(255,69,0,0.15), 0 0 60px rgba(255,69,0,0.08);
+    border-color: rgba(255,100,0,0.4) !important;
+}
+
+/* === DASHBOARD TABS — PILL STYLE === */
+.dashboard-tabs {
+    display: flex;
+    gap: 4px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 4px;
+    margin-bottom: 28px;
+}
+.dash-tab {
+    flex: 1;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 10px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+.dash-tab:hover { color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.04); }
+.dash-tab.active {
+    background: linear-gradient(135deg, rgba(255,69,0,0.2), rgba(255,100,0,0.12));
+    color: white;
+    border: 1px solid rgba(255,80,0,0.3);
+    box-shadow: 0 2px 12px rgba(255,69,0,0.2), inset 0 1px 0 rgba(255,150,0,0.1);
+    text-shadow: 0 0 16px rgba(255,120,0,0.6);
+}
+
+/* === MOTIVATIONAL STRIP — NEON FRAME === */
+.motive-strip {
+    background: linear-gradient(90deg, rgba(255,69,0,0.08), rgba(255,120,0,0.05), rgba(255,69,0,0.08));
+    border: 1px solid rgba(255,80,0,0.18);
+    border-top: 2px solid rgba(255,80,0,0.35);
+    border-radius: 12px;
+    padding: 11px 18px;
+    margin-bottom: 16px;
+    font-size: 0.76rem;
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(255,190,80,0.9);
+    letter-spacing: 0.2px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* === PROGRESS RING CONTAINER === */
+.progress-ring-wrap {
+    filter: drop-shadow(0 0 12px rgba(255,69,0,0.4));
+}
+
+/* === STAT CARDS ON DASHBOARD === */
+.dashboard-stats .stat-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dashboard-stats .stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(255,69,0,0.15);
+}
+.dashboard-stats .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,80,0,0.6), transparent);
+}
+
+/* === CHECKBOX UNLOCK RIPPLE === */
+.workout-checkbox.checked {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-color: #2ecc71;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(46,204,113,0.15), 0 0 16px rgba(46,204,113,0.3);
+}
+
+/* === WELCOME NAME GRADIENT === */
+.welcome-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ffffff 40%, #ff8c42 75%, #ffcc00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+/* === WORKOUT SECTION HEADER LINE === */
+.workout-section-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #fff 50%, rgba(255,140,0,0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === MUSCLE MAP — NEON GLOW RING === */
+.muscle-map-card {
+    border: 1px solid rgba(160,0,255,0.18);
+    box-shadow: 0 0 0 1px rgba(160,0,255,0.05), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* === CALORIE CHIP FIRE === */
+.workout-stat.calories {
+    color: #ff8c42;
+    border-color: rgba(255,100,0,0.25);
+    background: rgba(255,80,0,0.08);
+    font-weight: 700;
+}
+
+/* === SCROLL BAR STYLE === */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+::-webkit-scrollbar-thumb { background: rgba(255,69,0,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,69,0,0.5); }
+
+/* === ENTER BUTTON — HERO CTA === */
+.enter-button {
+    background: linear-gradient(135deg, #ff4500, #ff6b35) !important;
+    box-shadow: 0 4px 30px rgba(255,69,0,0.5), 0 0 60px rgba(255,69,0,0.15) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.enter-button:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 8px 40px rgba(255,69,0,0.7), 0 0 80px rgba(255,69,0,0.2) !important;
+}
+
+/* === GOAL CARDS === */
+.goal-card, .body-part-card {
+    transition: transform 0.2s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.goal-card:hover, .body-part-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(255,69,0,0.2);
+}
+.goal-card.selected, .body-part-card.selected {
+    box-shadow: 0 0 0 2px #ff4500, 0 8px 30px rgba(255,69,0,0.3);
+}
+
+/* === HISTORY ACCORDION ROWS === */
+.ht-row {
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+.ht-row:hover { transform: translateX(3px); }
+
+/* === PR TRACKER ITEMS === */
+.pr-item {
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.pr-item:hover {
+    box-shadow: 0 4px 20px rgba(255,69,0,0.15);
+    border-color: rgba(255,80,0,0.3) !important;
+}
+
+/* ============================================
+   EGG EXIT BUTTON
+   ============================================ */
+.egg-box {
+    position: relative;
+}
+.egg-exit-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.5);
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.18s;
+    z-index: 10;
+    line-height: 1;
+}
+.egg-exit-btn:hover {
+    background: rgba(255,60,0,0.25);
+    border-color: rgba(255,60,0,0.5);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ============================================
+   EGG GOAL ICONS (replaces progress bar)
+   ============================================ */
+.egg-goal-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+    padding: 6px 0 2px;
+}
+.egg-goal-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 1.4rem;
+    opacity: 0.25;
+    filter: grayscale(1);
+    transition: opacity 0.3s, filter 0.3s, transform 0.3s;
+}
+.egg-goal-icon.achieved {
+    opacity: 1;
+    filter: grayscale(0) drop-shadow(0 0 8px rgba(255,180,0,0.7));
+    transform: scale(1.15);
+}
+.egg-goal-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+}
+.egg-goal-icon.achieved .egg-goal-num {
+    color: #ffaa00;
+}
+
+/* Wider arm for horizontal dumbbell */
+.egg-arm-svg {
+    width: 140px !important;
+    max-width: 140px !important;
+    height: auto !important;
 }

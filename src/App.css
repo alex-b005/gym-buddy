@@ -382,10 +382,10 @@ body {
 .question-subtitle { color: #888; font-size: 1rem; }
 
 .form-container {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(10,10,14,0.6);
     padding: 40px;
     border-radius: 25px;
-    border: 1px solid #252525;
+    border: 1px solid rgba(255,80,0,0.18);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
@@ -507,8 +507,8 @@ body {
 }
 
 .goal-card {
-    background: rgba(20, 20, 20, 0.95);
-    border: 2px solid #252525;
+    background: transparent;
+    border: 2px solid rgba(255,80,0,0.18);
     border-radius: 25px;
     padding: 40px 30px;
     width: 280px;
@@ -571,8 +571,8 @@ body {
 }
 
 .bodypart-card {
-    background: rgba(20, 20, 20, 0.95);
-    border: 2px solid #252525;
+    background: transparent;
+    border: 2px solid rgba(255,80,0,0.18);
     border-radius: 20px;
     padding: 25px 20px;
     text-align: center;
@@ -589,7 +589,7 @@ body {
 
 .bodypart-card.featured {
     border-color: #e74c3c;
-    background: linear-gradient(145deg, rgba(231, 76, 60, 0.15) 0%, rgba(20, 20, 20, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(231, 76, 60, 0.15) 0%, transparent 100%);
     grid-column: span 2;
 }
 
@@ -627,7 +627,7 @@ body {
    WORKOUT TIMER
    ============================================ */
 .workout-timer {
-    background: linear-gradient(145deg, rgba(255, 107, 53, 0.15) 0%, rgba(20, 20, 20, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(255,107,53,0.15) 0%, transparent 100%);
     border: 2px solid #ff6b35;
     border-radius: 25px;
     padding: 25px 30px;
@@ -678,13 +678,13 @@ body {
    PROGRESS SECTION
    ============================================ */
 .progress-section {
-    background: rgba(20, 20, 20, 0.95);
+    background: transparent;
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
-    border: 1px solid #252525;
+    border: 1px solid rgba(255,80,0,0.15);
 }
 
 .progress-header {
@@ -754,6 +754,7 @@ body {
             radial-gradient(ellipse at 50% 50%, rgba(255,80,0,0.04) 0%, transparent 70%),
             linear-gradient(180deg, #0a0a0a 0%, #120800 40%, #0a0a0a 100%);
     animation: bgPulse 8s ease-in-out infinite alternate;
+    transition: background 0.6s ease;
 }
 @keyframes bgPulse {
     0%   { opacity: 0.8; }
@@ -819,8 +820,8 @@ body {
 }
 
 .mini-stat-card {
-    background: rgba(20, 20, 20, 0.95);
-    border: 1px solid #252525;
+    background: transparent;
+    border: 1px solid rgba(255,80,0,0.15);
     border-radius: 20px;
     padding: 20px 15px;
     text-align: center;
@@ -853,8 +854,8 @@ body {
 .workout-list { display: flex; flex-direction: column; gap: 15px; }
 
 .workout-card {
-    background: rgba(20, 20, 20, 0.95);
-    border: 1px solid #252525;
+    background: transparent;
+    border: 1px solid rgba(255,80,0,0.12);
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -869,7 +870,7 @@ body {
 
 .workout-card.completed {
     border-color: #2ecc71;
-    background: linear-gradient(145deg, rgba(46, 204, 113, 0.1) 0%, rgba(20, 20, 20, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(46, 204, 113, 0.1) 0%, transparent 100%);
 }
 
 .workout-left {
@@ -1029,7 +1030,7 @@ body {
    BONUS SECTION
    ============================================ */
 .bonus-section {
-    background: linear-gradient(145deg, rgba(46, 204, 113, 0.1) 0%, rgba(20, 20, 20, 0.95) 100%);
+    background: linear-gradient(145deg, rgba(46, 204, 113, 0.1) 0%, transparent 100%);
     border: 2px solid #2ecc71;
     border-radius: 25px;
     padding: 30px;
@@ -1125,7 +1126,7 @@ body {
    DISCLAIMER & SOURCE BOXES
    ============================================ */
 .disclaimer-box {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(10,10,14,0.5);
     border-left: 4px solid #f39c12;
     padding: 25px;
     border-radius: 15px;
@@ -1141,7 +1142,7 @@ body {
 .disclaimer-advice { color: #666; font-style: italic; font-size: 0.85rem; border-top: 1px solid #252525; padding-top: 15px; margin-bottom: 0 !important; }
 
 .source-box {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(10,10,14,0.5);
     border-left: 4px solid #3498db;
     padding: 25px;
     border-radius: 15px;
@@ -1456,7 +1457,7 @@ body {
 }
 
 .login-box {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(10,10,14,0.65);
     border: 1px solid rgba(255, 100, 0, 0.3);
     border-radius: 24px;
     padding: 40px 36px;
@@ -1642,19 +1643,36 @@ body {
    ============================================ */
 .timer-lock-notice {
     margin: 0 20px 16px;
-    padding: 12px 20px;
-    background: rgba(255, 200, 0, 0.08);
-    border: 1px solid rgba(255, 200, 0, 0.25);
-    border-radius: 12px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, rgba(255,200,0,0.1), rgba(255,160,0,0.06));
+    border: 1px solid rgba(255,210,0,0.45);
+    border-radius: 14px;
     color: #ffd700;
     font-size: 0.88rem;
+    font-weight: 600;
     text-align: center;
-    animation: pulse-glow 2s ease-in-out infinite;
+    text-shadow: 0 0 12px rgba(255,200,0,0.55);
+    box-shadow: 0 0 0 0 rgba(255,200,0,0), inset 0 1px 0 rgba(255,220,0,0.12);
+    animation: pulseGoldGlow 2s ease-in-out infinite;
+    letter-spacing: 0.2px;
+}
+.timer-lock-notice strong {
+    color: #ffe033;
+    text-shadow: 0 0 16px rgba(255,220,0,0.8);
 }
 
-@keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 rgba(255,200,0,0); }
-    50% { box-shadow: 0 0 12px rgba(255,200,0,0.2); }
+@keyframes pulseGoldGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255,200,0,0),
+        0 4px 20px rgba(255,170,0,0.08),
+        inset 0 1px 0 rgba(255,220,0,0.08);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255,200,0,0.25),
+        0 4px 30px rgba(255,170,0,0.2),
+        inset 0 1px 0 rgba(255,220,0,0.18);
+        border-color: rgba(255,210,0,0.7);
+    }
 }
 
 .workout-card.locked {
@@ -2798,7 +2816,7 @@ body {
    2. MUSCLE MAP
    ============================================ */
 .muscle-map-card {
-    background: linear-gradient(135deg, rgba(20,20,30,0.9), rgba(10,10,20,0.95));
+    background: transparent;
     border: 1px solid rgba(255,80,0,0.2);
     border-radius: 14px;
     padding: 10px 14px;
@@ -3179,7 +3197,7 @@ body {
 .chatbot-key-btn:hover { transform: translateY(-1px); }
 
 .chatbot-key-panel {
-    background: rgba(15,10,5,0.98);
+    background: rgba(15,10,5,0.6);
     border-bottom: 1px solid rgba(255,100,0,0.15);
     padding: 14px 16px;
 }
@@ -3278,14 +3296,19 @@ body {
    HIDDEN EGG
    ============================================ */
 .hidden-egg {
-    opacity: 0.08;
-    font-size: 0.75rem;
+    opacity: 0.28;
+    font-size: 1.1rem;
     cursor: pointer;
-    margin-left: 10px;
-    transition: opacity 0.3s;
+    margin-left: 12px;
+    transition: opacity 0.3s, transform 0.3s;
     user-select: none;
+    filter: grayscale(30%);
 }
-.hidden-egg:hover { opacity: 0.5; }
+.hidden-egg:hover {
+    opacity: 0.75;
+    transform: scale(1.2) rotate(-8deg);
+    filter: grayscale(0%);
+}
 
 /* ============================================
    EASTER EGG GAME
@@ -3841,7 +3864,7 @@ body {
 
 /* Animated gradient border on workout cards */
 .workout-card {
-    background: rgba(14,14,18,0.97);
+    background: transparent;
     border: 1px solid rgba(255,80,0,0.15);
     border-radius: 20px;
     padding: 20px;
@@ -3869,7 +3892,7 @@ body {
 }
 .workout-card.completed {
     border-color: rgba(46,204,113,0.4);
-    background: linear-gradient(145deg, rgba(46,204,113,0.06) 0%, rgba(14,14,18,0.97) 100%);
+    background: linear-gradient(145deg, rgba(46,204,113,0.06) 0%, transparent 100%);
 }
 
 /* Neon number badges */
@@ -3931,27 +3954,45 @@ body {
 
 /* Motivational quote strip — floats above workout list */
 .motive-strip {
-    background: linear-gradient(90deg, rgba(255,69,0,0.12), rgba(255,140,0,0.08), rgba(255,69,0,0.12));
-    border: 1px solid rgba(255,80,0,0.2);
-    border-radius: 12px;
-    padding: 10px 18px;
+    background: linear-gradient(135deg,
+    rgba(255,80,0,0.16) 0%,
+    rgba(255,140,0,0.1) 50%,
+    rgba(255,80,0,0.16) 100%);
+    border: 1px solid rgba(255,120,0,0.45);
+    border-radius: 14px;
+    padding: 14px 24px;
     margin-bottom: 16px;
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     font-style: italic;
-    color: rgba(255,200,100,0.85);
-    letter-spacing: 0.3px;
+    font-weight: 500;
+    color: #ffe0a0;
+    letter-spacing: 0.4px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    text-shadow: 0 0 18px rgba(255,170,0,0.55);
+    box-shadow: 0 0 0 0 rgba(255,120,0,0);
+    animation: motiveGlow 3s ease-in-out infinite;
+}
+@keyframes motiveGlow {
+    0%, 100% {
+        box-shadow: 0 2px 16px rgba(255,100,0,0.12),
+        inset 0 1px 0 rgba(255,200,80,0.08);
+    }
+    50% {
+        box-shadow: 0 2px 28px rgba(255,120,0,0.3),
+        inset 0 1px 0 rgba(255,200,80,0.14);
+        border-color: rgba(255,140,0,0.65);
+    }
 }
 .motive-strip::before {
     content: '';
     position: absolute;
     top: 0; left: -100%;
-    width: 60%;
+    width: 55%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,150,0,0.08), transparent);
-    animation: shimmerSlide 3s ease-in-out infinite;
+    background: linear-gradient(90deg, transparent, rgba(255,180,60,0.14), transparent);
+    animation: shimmerSlide 2.8s ease-in-out infinite;
 }
 @keyframes shimmerSlide {
     0%   { left: -100%; }
@@ -4040,8 +4081,8 @@ body {
 
 /* Muscle map card — enhanced */
 .muscle-map-card {
-    background: linear-gradient(135deg, rgba(18,10,26,0.95), rgba(10,8,18,0.98));
-    border: 1px solid rgba(180,0,255,0.15);
+    background: transparent;
+    border: 1px solid rgba(255,80,0,0.18);
     border-radius: 16px;
     padding: 12px 16px;
     margin: 0 20px 14px;
@@ -4113,7 +4154,7 @@ body::after {
 
 /* === WORKOUT CARD — GLASS MORPHISM + ACCENT LINE === */
 .workout-card {
-    background: linear-gradient(135deg, rgba(22,12,5,0.98) 0%, rgba(14,8,3,0.99) 100%);
+    background: transparent;
     border: 1px solid rgba(255,80,0,0.12);
     border-radius: 18px;
     padding: 18px 20px;
@@ -4395,4 +4436,1050 @@ body::after {
     width: 140px !important;
     max-width: 140px !important;
     height: auto !important;
+}
+
+/* Wide arm for sideways dumbbell photo-match */
+.egg-arm-svg {
+    width: 200px !important;
+    max-width: 200px !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* ================================================================
+   HOME THEME — Full blue scenery when workoutLocation === 'home'
+   ================================================================ */
+
+/* Override body/background gradient to cool blue tones */
+.home-theme {
+    --home-blue: #1565c0;
+    --home-blue-mid: #1976d2;
+    --home-blue-light: #42a5f5;
+    --home-glow: rgba(33, 150, 243, 0.55);
+}
+
+.home-theme.dashboard-screen,
+.home-theme.bodyparts-screen {
+    background: none !important;
+}
+
+/* Blue flames */
+.flames-home .flame {
+    background: linear-gradient(to top, #0d47a1, #1976d2, #42a5f5, #90caf9, rgba(144,202,249,0)) !important;
+    box-shadow: 0 0 8px #1976d2, 0 0 20px rgba(33,150,243,0.5) !important;
+}
+.flames-home .flame-inner {
+    background: linear-gradient(to top, #1565c0, #64b5f6, #e3f2fd, rgba(227,242,253,0)) !important;
+    box-shadow: 0 0 6px #42a5f5 !important;
+}
+.flames-home .flame-glow {
+    background: radial-gradient(ellipse at bottom, rgba(33,150,243,0.35) 0%, transparent 70%) !important;
+}
+
+/* Blue dumbbells */
+.dumbbell-home svg rect {
+    fill: #1976d2 !important;
+}
+.dumbbell-home {
+    filter: drop-shadow(0 0 8px rgba(33,150,243,0.6)) !important;
+    opacity: 0.55 !important;
+}
+
+/* Blue glow on cards in home theme */
+.home-theme .workout-card {
+    border-color: rgba(33,150,243,0.25) !important;
+}
+.home-theme .workout-card:hover {
+    border-color: rgba(66,165,250,0.5) !important;
+    box-shadow: 0 8px 32px rgba(33,150,243,0.25), 0 0 0 1px rgba(66,165,250,0.2) !important;
+}
+.home-theme .workout-card::after {
+    background: linear-gradient(180deg, #1976d2, #42a5f5) !important;
+}
+.home-theme .workout-card input[type="checkbox"]:checked + label,
+.home-theme .completed-check {
+    background: linear-gradient(135deg, #1565c0, #1976d2) !important;
+    box-shadow: 0 0 12px rgba(33,150,243,0.5) !important;
+}
+
+/* Blue progress ring */
+.home-theme .progress-ring-svg circle:last-child {
+    stroke: #42a5f5 !important;
+}
+
+/* Blue tab active */
+.home-theme .tab-btn.active {
+    background: linear-gradient(135deg, #1565c0, #1976d2) !important;
+    box-shadow: 0 4px 20px rgba(33,150,243,0.45) !important;
+}
+
+/* Blue CTA button */
+.home-theme .start-btn,
+.home-theme .save-btn,
+.home-theme .cta-enter-btn {
+    background: linear-gradient(135deg, #1565c0, #1976d2) !important;
+    box-shadow: 0 4px 20px rgba(33,150,243,0.4) !important;
+}
+.home-theme .start-btn:hover,
+.home-theme .save-btn:hover {
+    box-shadow: 0 0 30px rgba(33,150,243,0.7), 0 4px 20px rgba(33,150,243,0.4) !important;
+}
+
+/* Blue streak widget accent */
+.home-theme .streak-widget {
+    border-color: rgba(33,150,243,0.3) !important;
+    box-shadow: 0 0 20px rgba(33,150,243,0.15) !important;
+}
+
+/* Blue header gradient top border */
+.home-theme .dashboard-header {
+    border-bottom-color: rgba(33,150,243,0.2) !important;
+}
+
+/* Blue timer */
+.home-theme .workout-timer.running {
+    box-shadow: 0 0 0 0 rgba(33,150,243,0.7) !important;
+    animation: timerPulseBlue 1.5s infinite !important;
+}
+@keyframes timerPulseBlue {
+    0%   { box-shadow: 0 0 0 0 rgba(33,150,243,0.7); }
+    70%  { box-shadow: 0 0 0 14px rgba(33,150,243,0); }
+    100% { box-shadow: 0 0 0 0 rgba(33,150,243,0); }
+}
+
+/* Welcome name gradient — blue instead of orange */
+.home-theme .welcome-text h1 {
+    background: linear-gradient(90deg, #fff, #90caf9) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* Motive strip blue */
+/* home .motive-strip: see gold override below */
+
+/* Location badges in header */
+.location-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+.gym-badge {
+    background: rgba(255,69,0,0.2);
+    border: 1px solid rgba(255,69,0,0.4);
+    color: #ff7043;
+}
+.home-badge {
+    background: rgba(33,150,243,0.2);
+    border: 1px solid rgba(33,150,243,0.4);
+    color: #64b5f6;
+}
+
+/* ================================================================
+   LOCATION SELECTION SCREEN
+   ================================================================ */
+.location-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 20% 30%, rgba(255,69,0,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139,0,0,0.2) 0%, transparent 50%),
+    linear-gradient(145deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
+}
+.location-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 760px;
+    padding: 40px 20px;
+    text-align: center;
+}
+.location-header {
+    margin-bottom: 36px;
+}
+.location-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 12px rgba(255,165,0,0.5));
+}
+.location-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    letter-spacing: 2px;
+    color: white;
+    margin: 0 0 8px;
+}
+.location-subtitle {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.95rem;
+}
+.location-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 580px) {
+    .location-cards { grid-template-columns: 1fr; }
+}
+.location-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.location-card-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+}
+.gym-card .location-card-bg {
+    background: radial-gradient(circle at 30% 40%, rgba(255,69,0,0.25), transparent 70%);
+}
+.home-card .location-card-bg {
+    background: radial-gradient(circle at 30% 40%, rgba(33,150,243,0.25), transparent 70%);
+}
+.location-card:hover .location-card-bg { opacity: 1; }
+
+.gym-card {
+    border-color: rgba(255,69,0,0.2);
+}
+.gym-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(255,69,0,0.5);
+    box-shadow: 0 16px 48px rgba(255,69,0,0.3);
+}
+.home-card {
+    border-color: rgba(33,150,243,0.2);
+}
+.home-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(33,150,243,0.5);
+    box-shadow: 0 16px 48px rgba(33,150,243,0.3);
+}
+
+.location-card-emoji {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+.location-card h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0 0 8px;
+}
+.location-card p {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+.location-perks {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.location-perks li {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+}
+.location-cta {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+.gym-card .location-cta {
+    background: rgba(255,69,0,0.2);
+    border: 1px solid rgba(255,69,0,0.4);
+    color: #ff7043;
+}
+.gym-card:hover .location-cta {
+    background: rgba(255,69,0,0.35);
+    box-shadow: 0 0 16px rgba(255,69,0,0.4);
+}
+.home-card .location-cta {
+    background: rgba(33,150,243,0.2);
+    border: 1px solid rgba(33,150,243,0.4);
+    color: #64b5f6;
+}
+.home-card:hover .location-cta {
+    background: rgba(33,150,243,0.35);
+    box-shadow: 0 0 16px rgba(33,150,243,0.4);
+}
+
+
+/* ================================================================
+   WAVE TRANSITION — one smooth ocean wave rolls down & out
+   ================================================================ */
+.wave-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Lighter back crest — slides in slightly ahead */
+.wave-panel.wave-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 110px;
+    will-change: transform;
+}
+
+/* Main flood fill */
+.wave-flood {
+    position: absolute;
+    top: 80px; left: 0;
+    width: 100%;
+    height: calc(100% + 80px);
+    will-change: transform;
+}
+
+/* The highlight crest that sits at the top of the flood panel */
+.wave-crest {
+    position: absolute;
+    top: -79px; left: 0;
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+/* === PHASE IN — sweeps smoothly from top to covering screen === */
+.wave-in .wave-back {
+    animation: backPanelIn 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.wave-in .wave-flood {
+    animation: floodIn 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.06s;
+}
+
+@keyframes backPanelIn {
+    0%   { transform: translateY(-130px); opacity: 0; }
+    20%  { opacity: 1; }
+    100% { transform: translateY(calc(100vh + 10px)); opacity: 1; }
+}
+@keyframes floodIn {
+    0%   { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
+/* === PHASE OUT — sweeps smoothly off the bottom === */
+.wave-out .wave-back {
+    animation: backPanelOut 0.5s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+.wave-out .wave-flood {
+    animation: floodOut 0.5s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+@keyframes backPanelOut {
+    0%   { transform: translateY(calc(100vh - 110px)); opacity: 1; }
+    100% { transform: translateY(calc(100vh + 20px)); opacity: 0; }
+}
+@keyframes floodOut {
+    0%   { transform: translateY(0%); }
+    100% { transform: translateY(100%); }
+}
+
+/* ================================================================
+   LOCATION TOGGLE BAR
+   ================================================================ */
+.location-toggle-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 20px;
+    margin: 8px 0 4px;
+}
+.location-toggle-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+}
+.location-toggle-pills {
+    display: flex;
+    gap: 6px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 30px;
+    padding: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.loc-pill {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 6px 18px;
+    border-radius: 24px;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.45);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.loc-pill:hover { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+.loc-active-gym {
+    background: linear-gradient(135deg, #b22200, #ff4500) !important;
+    color: white !important;
+    box-shadow: 0 2px 12px rgba(255,69,0,0.5) !important;
+}
+.loc-active-home {
+    background: linear-gradient(135deg, #0d47a1, #1976d2) !important;
+    color: white !important;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.5) !important;
+}
+
+/* ================================================================
+   HOME THEME — entire dashboard turns blue when at-home is selected
+   ================================================================ */
+.home-theme.dashboard-screen {
+    background: none !important;
+}
+
+/* Flames → blue */
+.home-theme .flames-container .flame {
+    background: linear-gradient(to top,
+    #0d47a1 0%, #1565c0 25%, #1976d2 50%,
+    #42a5f5 75%, rgba(144,202,249,0) 100%) !important;
+    box-shadow: 0 0 10px #1565c0, 0 0 22px rgba(33,150,243,0.45) !important;
+}
+.home-theme .flames-container .flame-inner {
+    background: linear-gradient(to top, #1565c0 0%, #64b5f6 60%, rgba(227,242,253,0) 100%) !important;
+}
+.home-theme .flames-container .flame-glow {
+    background: radial-gradient(ellipse at bottom, rgba(33,150,243,0.42) 0%, transparent 70%) !important;
+}
+
+/* Floating dumbbells → blue */
+.home-theme .dumbbell svg rect { fill: #1565c0 !important; }
+.home-theme .dumbbell { filter: drop-shadow(0 0 9px rgba(33,150,243,0.65)) !important; }
+
+/* Workout cards */
+.home-theme .workout-card { border-color: rgba(33,150,243,0.2) !important; }
+.home-theme .workout-card:hover {
+    border-color: rgba(66,165,250,0.5) !important;
+    box-shadow: 0 8px 32px rgba(33,150,243,0.22), 0 0 0 1px rgba(66,165,250,0.18) !important;
+}
+.home-theme .workout-card::after {
+    background: linear-gradient(180deg, #1565c0, #42a5f5) !important;
+}
+
+/* Progress bar */
+.home-theme .progress-bar {
+    background: linear-gradient(90deg, #1565c0, #42a5f5) !important;
+    box-shadow: 0 0 10px rgba(33,150,243,0.4) !important;
+}
+
+/* Tabs */
+.home-theme .dash-tab.active {
+    background: linear-gradient(135deg, #1565c0, #1976d2) !important;
+    box-shadow: 0 4px 18px rgba(33,150,243,0.45) !important;
+}
+.home-theme .dashboard-tabs {
+    border-color: rgba(33,150,243,0.12) !important;
+}
+
+/* Buttons */
+.home-theme .start-btn, .home-theme .save-btn {
+    background: linear-gradient(135deg, #1565c0, #1976d2) !important;
+    box-shadow: 0 4px 18px rgba(33,150,243,0.38) !important;
+}
+.home-theme .start-btn:hover, .home-theme .save-btn:hover {
+    box-shadow: 0 0 28px rgba(33,150,243,0.7), 0 4px 18px rgba(33,150,243,0.4) !important;
+}
+.home-theme .change-goals-btn {
+    background: linear-gradient(135deg, #cc3300, #ff4500) !important;
+    border-color: rgba(255,69,0,0.5) !important;
+    color: white !important;
+    box-shadow: 0 3px 14px rgba(255,69,0,0.35) !important;
+}
+.home-theme .change-goals-btn:hover {
+    background: linear-gradient(135deg, #e63800, #ff5500) !important;
+    box-shadow: 0 4px 22px rgba(255,69,0,0.55) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Timer pulse */
+.home-theme .workout-timer.running {
+    animation: timerPulseBlue 1.5s infinite !important;
+}
+@keyframes timerPulseBlue {
+    0%   { box-shadow: 0 0 0 0 rgba(33,150,243,0.7); }
+    70%  { box-shadow: 0 0 0 14px rgba(33,150,243,0); }
+    100% { box-shadow: 0 0 0 0 rgba(33,150,243,0); }
+}
+
+/* Welcome text */
+.home-theme .welcome-text h1 {
+    background: linear-gradient(90deg, #fff 0%, #90caf9 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* Motive strip */
+/* home .motive-strip: see gold override below */
+
+/* Stat cards */
+.home-theme .stat-card:hover, .home-theme .mini-stat-card:hover {
+    border-color: rgba(33,150,243,0.35) !important;
+    box-shadow: 0 6px 24px rgba(33,150,243,0.18) !important;
+}
+
+/* Header */
+.home-theme .dashboard-header {
+    border-bottom-color: rgba(33,150,243,0.18) !important;
+}
+
+/* Location badges */
+.location-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+.gym-badge { background: rgba(255,69,0,0.2); border: 1px solid rgba(255,69,0,0.4); color: #ff7043; }
+.home-badge { background: rgba(33,150,243,0.2); border: 1px solid rgba(33,150,243,0.4); color: #64b5f6; }
+
+/* Arm size */
+.egg-arm-svg {
+    width: 100px !important;
+    max-width: 100px !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* ================================================================
+   LOCATION SCREEN
+   ================================================================ */
+.location-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 20% 30%, rgba(255,69,0,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139,0,0,0.2) 0%, transparent 50%),
+    linear-gradient(145deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
+}
+.location-content {
+    position: relative; z-index: 10; width: 100%;
+    max-width: 760px; padding: 40px 20px; text-align: center;
+}
+.location-header { margin-bottom: 36px; }
+.location-icon { font-size: 2.8rem; display: block; margin-bottom: 12px; filter: drop-shadow(0 0 12px rgba(255,165,0,0.5)); }
+.location-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem,5vw,2.8rem); letter-spacing: 2px; color: white; margin: 0 0 8px; }
+.location-subtitle { color: rgba(255,255,255,0.55); font-size: 0.95rem; }
+.location-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 580px) { .location-cards { grid-template-columns: 1fr; } }
+
+.location-card {
+    position: relative; overflow: hidden; border-radius: 20px;
+    padding: 32px 24px; text-align: left; cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04); backdrop-filter: blur(8px);
+    transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.location-card-bg { position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s ease; border-radius: inherit; }
+.gym-card .location-card-bg { background: radial-gradient(circle at 30% 40%, rgba(255,69,0,0.25), transparent 70%); }
+.home-card .location-card-bg { background: radial-gradient(circle at 30% 40%, rgba(33,150,243,0.25), transparent 70%); }
+.location-card:hover .location-card-bg { opacity: 1; }
+.gym-card { border-color: rgba(255,69,0,0.2); }
+.gym-card:hover { transform: translateY(-6px) scale(1.02); border-color: rgba(255,69,0,0.5); box-shadow: 0 16px 48px rgba(255,69,0,0.3); }
+.home-card { border-color: rgba(33,150,243,0.2); }
+.home-card:hover { transform: translateY(-6px) scale(1.02); border-color: rgba(33,150,243,0.5); box-shadow: 0 16px 48px rgba(33,150,243,0.3); }
+.location-card-emoji { font-size: 2.8rem; display: block; margin-bottom: 14px; }
+.location-card h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; letter-spacing: 2px; color: white; margin: 0 0 8px; }
+.location-card p { color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.5; margin: 0 0 16px; }
+.location-perks { list-style: none; padding: 0; margin: 0 0 20px; display: flex; flex-direction: column; gap: 6px; }
+.location-perks li { font-size: 0.8rem; color: rgba(255,255,255,0.65); }
+.location-cta { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 2px; display: inline-block; padding: 8px 20px; border-radius: 30px; transition: all 0.2s ease; }
+.gym-card .location-cta { background: rgba(255,69,0,0.2); border: 1px solid rgba(255,69,0,0.4); color: #ff7043; }
+.gym-card:hover .location-cta { background: rgba(255,69,0,0.35); box-shadow: 0 0 16px rgba(255,69,0,0.4); }
+.home-card .location-cta { background: rgba(33,150,243,0.2); border: 1px solid rgba(33,150,243,0.4); color: #64b5f6; }
+.home-card:hover .location-cta { background: rgba(33,150,243,0.35); box-shadow: 0 0 16px rgba(33,150,243,0.4); }
+
+/* ================================================================
+   CALENDAR — GYM vs HOME color coding
+   ================================================================ */
+.cal-location-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 4px 0 10px;
+    flex-wrap: wrap;
+}
+.cal-loc-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+.gym-tag { background: rgba(255,69,0,0.18); border: 1px solid rgba(255,69,0,0.35); color: #ff7043; }
+.home-tag { background: rgba(33,150,243,0.18); border: 1px solid rgba(33,150,243,0.35); color: #64b5f6; }
+
+/* Calendar cells — gym = orange, home = blue */
+.cal-cell.gym-workout {
+    background: rgba(255,69,0,0.2) !important;
+    border-color: rgba(255,69,0,0.5) !important;
+    box-shadow: 0 0 8px rgba(255,69,0,0.25) !important;
+}
+.cal-cell.home-workout {
+    background: rgba(33,150,243,0.2) !important;
+    border-color: rgba(33,150,243,0.5) !important;
+    box-shadow: 0 0 8px rgba(33,150,243,0.25) !important;
+}
+.cal-cell.both-workout {
+    background: linear-gradient(135deg, rgba(255,69,0,0.2), rgba(33,150,243,0.2)) !important;
+    border-color: rgba(150,100,200,0.5) !important;
+}
+.cal-cell.selected-day {
+    outline: 2px solid rgba(255,255,255,0.5) !important;
+    outline-offset: 2px;
+}
+.cal-dot { font-size: 0.65rem; display: block; text-align: center; margin-top: 1px; }
+
+/* Legend dots */
+.gym-dot-l { background: rgba(255,69,0,0.7) !important; border-color: rgba(255,69,0,0.9) !important; }
+.home-dot-l { background: rgba(33,150,243,0.7) !important; border-color: rgba(33,150,243,0.9) !important; }
+
+/* Day detail popup */
+.cal-day-detail {
+    margin: 12px 0;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    animation: fadeSlideDown 0.25s ease;
+}
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.cal-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.05);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.cal-detail-close {
+    background: none; border: none; color: rgba(255,255,255,0.5);
+    cursor: pointer; font-size: 0.9rem; padding: 2px 6px; border-radius: 6px;
+    transition: all 0.15s;
+}
+.cal-detail-close:hover { color: white; background: rgba(255,255,255,0.1); }
+.cal-detail-entry {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.cal-detail-entry:last-child { border-bottom: none; }
+.detail-gym { border-left: 3px solid #ff4500; }
+.detail-home { border-left: 3px solid #1976d2; }
+.cal-detail-loc {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    color: rgba(255,255,255,0.6);
+}
+.detail-gym .cal-detail-loc { color: #ff7043; }
+.detail-home .cal-detail-loc { color: #64b5f6; }
+.cal-detail-row {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 3px;
+}
+.cal-detail-row strong { color: rgba(255,255,255,0.8); }
+
+/* Calendar home theme */
+.calendar-tab.home-theme .cal-nav-btn:hover { background: rgba(33,150,243,0.2) !important; color: #64b5f6 !important; }
+.calendar-tab.home-theme .cal-title h2 { color: #90caf9; }
+
+/* ================================================================
+   HOME THEME — WORKOUT CARDS: identical layout to gym, blue accents only
+   Same structure, same feel, same hover/shadow behavior — just blue
+   ================================================================ */
+
+/* Number circle — same size/shape/shadow as gym, blue fill */
+.home-theme .workout-number {
+    background: linear-gradient(135deg, #1565c0, #2196f3) !important;
+    box-shadow: 0 0 12px rgba(33,150,243,0.55), 0 0 24px rgba(33,150,243,0.2) !important;
+}
+.home-theme .workout-card.completed .workout-number {
+    background: linear-gradient(135deg, #00796b, #26a69a) !important;
+    box-shadow: 0 0 12px rgba(38,166,154,0.5) !important;
+}
+
+/* Card — transparent like gym, blue border */
+.home-theme .workout-card {
+    background: transparent !important;
+    border-color: rgba(33,150,243,0.15) !important;
+}
+.home-theme .workout-card::before {
+    background: linear-gradient(120deg, rgba(33,150,243,0.04) 0%, transparent 60%) !important;
+}
+/* Hover — IDENTICAL motion to gym (translateX + translateY) */
+.home-theme .workout-card:hover {
+    border-color: rgba(66,165,250,0.5) !important;
+    transform: translateX(6px) translateY(-1px) !important;
+    box-shadow: -4px 4px 24px rgba(33,150,243,0.18) !important;
+}
+.home-theme .workout-card:hover::before {
+    background: linear-gradient(120deg, rgba(33,150,243,0.08) 0%, transparent 60%) !important;
+}
+/* Left accent bar — blue */
+.home-theme .workout-card::after {
+    background: linear-gradient(180deg, #1565c0, #42a5f5) !important;
+}
+
+/* How To button — always red (matching gym) */
+
+/* Tips — same box, amber → sky-blue text */
+.home-theme .workout-tips {
+    background: rgba(33,150,243,0.07) !important;
+    border: 1px solid rgba(33,150,243,0.16) !important;
+}
+.home-theme .workout-tips span { color: #64b5f6 !important; }
+
+/* Stat chips — same shape/size, blue label color */
+.home-theme .workout-stat strong { color: #42a5f5 !important; }
+.home-theme .workout-card:hover .workout-stat {
+    background: rgba(33,150,243,0.07) !important;
+    border-color: rgba(33,150,243,0.2) !important;
+}
+
+/* Calories chip */
+.home-theme .workout-stat.calories {
+    background: rgba(33,150,243,0.1) !important;
+    border-color: rgba(33,150,243,0.28) !important;
+    color: #64b5f6 !important;
+}
+.home-theme .workout-stat.calories strong {
+    animation: calPulseBlue 2s ease-in-out infinite !important;
+}
+@keyframes calPulseBlue {
+    0%,100% { opacity: 1; }
+    50%     { opacity: 0.65; }
+}
+
+/* Active tab — same underline style, blue color */
+.home-theme .dash-tab.active {
+    border-bottom-color: #2196f3 !important;
+    box-shadow: 0 4px 16px rgba(33,150,243,0.3) !important;
+    text-shadow: 0 0 12px rgba(66,165,250,0.5) !important;
+}
+
+/* Section divider bar */
+.home-theme .section-divider {
+    background: linear-gradient(90deg, rgba(33,150,243,0.5), transparent) !important;
+}
+
+/* Progress bar */
+.home-theme .progress-bar {
+    background: linear-gradient(90deg, #1565c0, #42a5f5) !important;
+    box-shadow: 0 0 10px rgba(33,150,243,0.4) !important;
+}
+
+/* Motivational quote strip override: see CRISP DARK-BLUE BORDERS section */
+
+/* Checkbox hover */
+.home-theme .workout-checkbox:hover {
+    border-color: #42a5f5 !important;
+    background: rgba(33,150,243,0.1) !important;
+}
+
+/* Cooldown toast */
+.home-theme .cooldown-toast {
+    background: rgba(33,150,243,0.14) !important;
+    border-color: rgba(33,150,243,0.32) !important;
+    color: #90caf9 !important;
+}
+
+/* Timer lock notice — keep gold glow (same as gym, universal) */
+.home-theme .timer-lock-notice {
+    /* inherit gold styling — same as gym, no override needed */
+}
+
+/* Progress text */
+.home-theme .progress-title { color: #64b5f6 !important; }
+.home-theme .progress-complete { color: #42a5f5 !important; }
+.home-theme .progress-remaining { color: rgba(144,202,249,0.6) !important; }
+
+
+/* ================================================================
+   HOME THEME — CRISP DARK-BLUE BORDERS ON ALL ELEMENTS
+   Outline everything with a consistent deep-blue border treatment
+   ================================================================ */
+
+/* Workout cards */
+.home-theme .workout-card {
+    border-color: rgba(21,101,192,0.35) !important;
+    box-shadow: 0 2px 12px rgba(13,71,161,0.15) !important;
+}
+
+/* Timer widget */
+.home-theme .workout-timer {
+    background: linear-gradient(145deg, rgba(21,101,192,0.14) 0%, rgba(10,14,26,0.97) 100%) !important;
+    border: 2px solid rgba(25,118,210,0.6) !important;
+    box-shadow: 0 4px 24px rgba(13,71,161,0.2) !important;
+}
+.home-theme .timer-label { color: #64b5f6 !important; }
+
+/* Streak widget */
+.home-theme .streak-widget {
+    background: linear-gradient(135deg, rgba(21,101,192,0.14), rgba(66,165,250,0.06)) !important;
+    border: 1px solid rgba(25,118,210,0.4) !important;
+    box-shadow: 0 2px 14px rgba(13,71,161,0.15) !important;
+}
+
+/* Mini stat cards */
+.home-theme .mini-stat-card {
+    background: rgba(10,14,26,0.97) !important;
+    border: 1px solid rgba(21,101,192,0.32) !important;
+    box-shadow: 0 2px 10px rgba(13,71,161,0.12) !important;
+}
+.home-theme .mini-stat-value { color: #42a5f5 !important; }
+.home-theme .mini-stat-value.burn { color: #64b5f6 !important; }
+
+/* Progress section */
+.home-theme .progress-section {
+    border: 1px solid rgba(21,101,192,0.28) !important;
+    background: rgba(10,14,26,0.6) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 14px rgba(13,71,161,0.1) !important;
+}
+
+/* Location toggle pills wrapper */
+.home-theme .location-toggle-pills {
+    border-color: rgba(21,101,192,0.3) !important;
+    background: rgba(10,14,26,0.5) !important;
+}
+
+/* Dashboard tabs bar */
+.home-theme .dashboard-tabs {
+    border-bottom: 1px solid rgba(21,101,192,0.25) !important;
+}
+.home-theme .dash-tab {
+    color: rgba(144,202,249,0.6) !important;
+}
+.home-theme .dash-tab:hover {
+    color: #90caf9 !important;
+    background: rgba(33,150,243,0.08) !important;
+}
+
+/* Workout list section wrapper */
+.home-theme .workout-section {
+    border-radius: 16px !important;
+}
+
+/* Muscle map card */
+.home-theme .muscle-map-card {
+    border: 1px solid rgba(21,101,192,0.35) !important;
+    background: linear-gradient(135deg, rgba(10,18,36,0.97), rgba(8,12,26,0.99)) !important;
+    box-shadow: 0 4px 24px rgba(13,71,161,0.15) !important;
+}
+
+/* Home motive strip — GOLD, stands out like a trophy */
+.home-theme .motive-strip {
+    background: linear-gradient(135deg,
+    rgba(255,80,0,0.16) 0%,
+    rgba(255,140,0,0.1) 50%,
+    rgba(255,80,0,0.16) 100%) !important;
+    border: 1px solid rgba(255,120,0,0.45) !important;
+    color: #ffe0a0 !important;
+    font-size: 0.76rem !important;
+    font-weight: 500 !important;
+    padding: 11px 18px !important;
+    text-shadow: 0 0 18px rgba(255,170,0,0.55) !important;
+    letter-spacing: 0.2px !important;
+    animation: motiveGlow 3s ease-in-out infinite !important;
+}
+.home-theme .motive-strip::before {
+    background: linear-gradient(90deg, transparent, rgba(255,180,60,0.14), transparent) !important;
+}
+
+/* Progress ring container */
+.home-theme .progress-ring-svg {
+    filter: drop-shadow(0 0 8px rgba(33,150,243,0.4)) !important;
+}
+
+/* Bonus section */
+.home-theme .bonus-section {
+    background: linear-gradient(145deg, rgba(21,101,192,0.1) 0%, rgba(10,14,26,0.97) 100%) !important;
+    border: 2px solid rgba(25,118,210,0.5) !important;
+}
+
+/* ================================================================
+   HOME THEME — RICH DARK NAVY FULL-PAGE BACKGROUND
+   Much deeper, more dramatic. Not washed out.
+   ================================================================ */
+
+/* Override the global ::before with a deep navy for home-theme */
+.home-theme .dashboard-screen::before,
+.home-theme::before {
+    background:
+            radial-gradient(ellipse at 15% 10%, rgba(13,71,161,0.45) 0%, transparent 45%),
+            radial-gradient(ellipse at 85% 90%, rgba(10,55,130,0.4)  0%, transparent 45%),
+            radial-gradient(ellipse at 75% 15%, rgba(25,118,210,0.18) 0%, transparent 38%),
+            radial-gradient(ellipse at 25% 85%, rgba(21,101,192,0.2)  0%, transparent 38%),
+            linear-gradient(160deg, #03050f 0%, #060d1f 30%, #04091a 60%, #060d1f 100%) !important;
+    animation: homeBgBreath 8s ease-in-out infinite alternate !important;
+}
+@keyframes homeBgBreath {
+    0%   { opacity: 0.9; }
+    100% { opacity: 1;   }
+}
+
+/* The page body itself when home-theme is active */
+.home-theme {
+    background: linear-gradient(160deg, #03050f 0%, #060d1f 50%, #04091a 100%) !important;
+    min-height: 100vh !important;
+}
+
+/* ================================================================
+   HOME THEME — HISTORY / PR CARD BORDERS
+   Make cards stand out against the dark bg
+   ================================================================ */
+.home-theme .pr-tracker {
+    background: linear-gradient(135deg, rgba(13,71,161,0.18), rgba(21,101,192,0.08)) !important;
+    border: 1px solid rgba(25,118,210,0.45) !important;
+    box-shadow: 0 4px 24px rgba(13,71,161,0.2), inset 0 1px 0 rgba(100,181,246,0.06) !important;
+}
+.home-theme .pr-card {
+    background: rgba(13,71,161,0.06) !important;
+    border: 1px solid rgba(25,118,210,0.28) !important;
+}
+.home-theme .pr-card:hover {
+    background: rgba(13,71,161,0.2) !important;
+    border-color: rgba(33,150,243,0.65) !important;
+    box-shadow: 0 4px 20px rgba(13,71,161,0.3) !important;
+}
+.home-theme .pr-card-value {
+    color: #42a5f5 !important;
+    text-shadow: 0 0 12px rgba(33,150,243,0.45) !important;
+}
+
+/* History table */
+.home-theme .history-table {
+    border: 1px solid rgba(25,118,210,0.35) !important;
+    box-shadow: 0 4px 20px rgba(13,71,161,0.15) !important;
+}
+.home-theme .ht-header-row {
+    background: rgba(13,71,161,0.22) !important;
+    border-bottom: 1px solid rgba(25,118,210,0.3) !important;
+    color: rgba(100,181,246,0.8) !important;
+}
+.home-theme .ht-row-wrap {
+    border-bottom: 1px solid rgba(25,118,210,0.1) !important;
+}
+.home-theme .ht-row-wrap:hover {
+    background: rgba(13,71,161,0.12) !important;
+}
+
+/* Workout list card darker for contrast */
+.home-theme .workout-card {
+    background: transparent !important;
+    border-color: rgba(21,101,192,0.32) !important;
+    box-shadow: 0 2px 14px rgba(6,13,31,0.2) !important;
+}
+.home-theme .workout-card:hover {
+    background: rgba(13,71,161,0.07) !important;
+    border-color: rgba(66,165,250,0.55) !important;
+    box-shadow: -4px 4px 28px rgba(13,71,161,0.28) !important;
+}
+
+/* Header area */
+.home-theme .dashboard-header {
+    border-bottom: 1px solid rgba(25,118,210,0.3) !important;
+    background: rgba(3,5,15,0.5) !important;
+    backdrop-filter: blur(12px) !important;
+    margin-bottom: 4px !important;
+}
+
+/* Welcome name — brighter pop */
+.home-theme .welcome-text h1 {
+    background: linear-gradient(90deg, #fff 30%, #64b5f6 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 2px 8px rgba(33,150,243,0.3)) !important;
+}
+
+/* Progress section card */
+.home-theme .progress-section {
+    background: rgba(13,71,161,0.08) !important;
+    border: 1px solid rgba(21,101,192,0.35) !important;
+    box-shadow: 0 4px 20px rgba(6,13,31,0.6) !important;
+}
+
+/* Mini stat cards */
+.home-theme .mini-stat-card {
+    background: rgba(13,71,161,0.08) !important;
+    border: 1px solid rgba(21,101,192,0.38) !important;
+    box-shadow: 0 3px 14px rgba(6,13,31,0.6) !important;
+}
+.home-theme .mini-stat-card:hover {
+    border-color: rgba(33,150,243,0.6) !important;
+    box-shadow: 0 6px 24px rgba(13,71,161,0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Streak widget */
+.home-theme .streak-widget {
+    background: linear-gradient(135deg, rgba(13,71,161,0.2), rgba(21,101,192,0.08)) !important;
+    border: 1px solid rgba(25,118,210,0.45) !important;
+    box-shadow: 0 3px 16px rgba(6,13,31,0.5) !important;
+}
+
+/* Timer */
+.home-theme .workout-timer {
+    background: linear-gradient(145deg, rgba(13,71,161,0.18) 0%, transparent 100%) !important;
+    border: 2px solid rgba(25,118,210,0.6) !important;
+    box-shadow: 0 6px 28px rgba(6,13,31,0.6), inset 0 1px 0 rgba(100,181,246,0.07) !important;
+}
+
+/* Dashboard tabs */
+.home-theme .dashboard-tabs {
+    background: rgba(3,5,15,0.6) !important;
+    border-bottom: 1px solid rgba(21,101,192,0.3) !important;
 }

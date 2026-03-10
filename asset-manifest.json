@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gym-buddy/static/css/main.57d7341c.css",
-    "main.js": "/gym-buddy/static/js/main.d1f6c0e8.js",
+    "main.css": "/gym-buddy/static/css/main.455fe358.css",
+    "main.js": "/gym-buddy/static/js/main.bda5dad8.js",
     "static/js/453.345de8f0.chunk.js": "/gym-buddy/static/js/453.345de8f0.chunk.js",
     "index.html": "/gym-buddy/index.html",
-    "main.57d7341c.css.map": "/gym-buddy/static/css/main.57d7341c.css.map",
-    "main.d1f6c0e8.js.map": "/gym-buddy/static/js/main.d1f6c0e8.js.map",
+    "main.455fe358.css.map": "/gym-buddy/static/css/main.455fe358.css.map",
+    "main.bda5dad8.js.map": "/gym-buddy/static/js/main.bda5dad8.js.map",
     "453.345de8f0.chunk.js.map": "/gym-buddy/static/js/453.345de8f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57d7341c.css",
-    "static/js/main.d1f6c0e8.js"
+    "static/css/main.455fe358.css",
+    "static/js/main.bda5dad8.js"
   ]
 }
